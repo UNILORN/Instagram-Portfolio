@@ -12,8 +12,10 @@ class Instagram
 
     }
 
-    public static function getAllColumn()
+    /**
+     * @param array $data
+     */
+    public static function getAllColumn(array $data)
     {
-
     }
 }
