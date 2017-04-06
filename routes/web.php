@@ -15,4 +15,10 @@ Route::get('/', function () {
     return view('top');
 });
 
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('/', function () {
+        view('admin/top');
+    });
+});
+
 Auth::routes();
