@@ -3,9 +3,9 @@
 @section('title','Instagram')
 
 @section('content')
-<main>
+    <main>
 
-    ここはトップです
+        ここはトップです
 
-</main>
+    </main>
 @endsection
