@@ -5,6 +5,7 @@
 @section('content')
 <main>
 
+    ここはトップです
 
 </main>
 @endsection

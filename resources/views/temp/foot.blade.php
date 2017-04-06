@@ -1,1 +1,3 @@
-<footer></footer>
+<footer>
+    <p>これはフッターです</p>
+</footer>
