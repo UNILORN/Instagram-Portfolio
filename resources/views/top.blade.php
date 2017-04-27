@@ -7,8 +7,8 @@
 
 @section('content')
     <main>
-
-        ここはトップです
-
+        <div class="container">
+            <p>ここはトップです</p>
+        </div>
     </main>
 @endsection

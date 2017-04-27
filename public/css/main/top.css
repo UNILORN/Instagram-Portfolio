@@ -6,3 +6,8 @@ html,body,p,ul,li{
     max-width: 980px;
     margin: auto;
 }
+main{
+    background: url("../../img/back.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+}
