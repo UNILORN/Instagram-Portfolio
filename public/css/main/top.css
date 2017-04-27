@@ -2,12 +2,62 @@ html,body,p,ul,li{
     margin:0;
     padding:0;
 }
+li,ul,a{
+    text-decoration: none;
+    list-style: none;
+}
+
 .container {
     max-width: 980px;
     margin: auto;
 }
-main{
-    background: url("../../img/back.jpg") no-repeat center;
+.main{
+    width:100%;
+    letter-spacing: -.4em;
+}
+
+.mainContents{
+    display: inline-block;
+    width:780px;
+    letter-spacing: initial;
+    vertical-align: top;
+}
+.instView{
+    width:100%;
+    box-sizing: border-box;
+    padding:10px;
+}
+.instView ul {
+    box-sizing: border-box;
+    padding: 10px;
+}
+.instView li{
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width: 200px;
+    height:200px;
+
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+
+}
+.instView a{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.mainSlider{
+    display: inline-block;
+    width:200px;
+    letter-spacing: initial;
+    background-color: #411c0e;
     height: 100vh;
 }
+

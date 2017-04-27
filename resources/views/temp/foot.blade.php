@@ -1,5 +1,5 @@
 <footer>
     <div class="container">
-        <p>これはフッターです</p>
+        <p>© 2017 UNILORN</p>
     </div>
 </footer>
