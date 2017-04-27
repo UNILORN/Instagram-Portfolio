@@ -1,3 +1,5 @@
 <footer>
-    <p>これはフッターです</p>
+    <div class="container">
+        <p>これはフッターです</p>
+    </div>
 </footer>

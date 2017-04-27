@@ -1,0 +1,27 @@
+header{
+    background-color: #ffffff;
+    width:100%;
+    height: 100px;
+    letter-spacing: -.4em;
+}
+
+.headerTitle{
+    display: inline-block;
+    margin:auto;
+    width:20%;
+    letter-spacing: initial;
+}
+
+.headerList{
+    display: inline-block;
+    width: 80%;
+    text-align: right;
+    letter-spacing: initial;
+}
+.headerList ul{
+    display: inline-block;
+}
+
+.headerList ul li{
+    display: inline-block;
+}
