@@ -7,9 +7,11 @@ header{
 
 .headerTitle{
     display: inline-block;
-    margin:auto;
     width:20%;
     letter-spacing: initial;
+    height: 100px;
+    line-height: 100px;
+    vertical-align: top;
 }
 
 .headerList{
@@ -17,11 +19,23 @@ header{
     width: 80%;
     text-align: right;
     letter-spacing: initial;
+    height: 100px;
 }
 .headerList ul{
+    height: 100px;
     display: inline-block;
 }
 
 .headerList ul li{
+    width:100px;
+    height: 100px;
+    line-height: 100px;
     display: inline-block;
+}
+.headerList a{
+    width:100px;
+    height: 100px;
+    line-height: 100px;
+    display: inline-block;
+    text-align: center;
 }
