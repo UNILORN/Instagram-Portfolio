@@ -14,6 +14,17 @@
                         <h1>〜〜の写真集</h1>
                     </div>
                     <div class="instView">
+                        {{var_dump("a")}}
+                        {{var_dump("a")}}
+                        {{var_dump("a")}}
+                        {{var_dump("a")}}
+                        {{var_dump("a")}}
+                        {{var_dump("a")}}
+                        {{var_dump("a")}}
+                        {{var_dump("a")}}
+                        {{var_dump("a")}}
+                        {{var_dump("a")}}
+                        {{var_dump("a")}}
                         <ul>
                             <li style="background-image: url('https://scontent.cdninstagram.com/t51.2885-19/s150x150/15877460_1410344595651671_3630554074560069632_a.jpg')"><a href="#"></a></li>
                             <li style="background-image: url('https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/18095414_438160219874896_4937459292123955200_n.jpg')"><a href="https://www.instagram.com/p/BTStvslBiwr6Fa-6o9UMl1q49a_oHf7ECQoko00/"></a></li>
