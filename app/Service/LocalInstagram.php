@@ -25,7 +25,8 @@ class LocalInstagram
             http_build_query($query)
         );
 
-        var_dump($response);
+        return json_decode($response);
+
     }
 
 }

@@ -11,7 +11,12 @@
 |
 */
 
+use App\Service\LocalInstagram;
+
 Route::get('/', function () {
+
+    $aa = new LocalInstagram();
+    dd($aa->getAllColumn());
 
     return view('top');
 });
