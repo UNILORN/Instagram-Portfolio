@@ -17,7 +17,7 @@ class MSTINSTAGRAM extends Migration
             $table->incriments('id')->unique();
             $table->string('title');
             $table->string('url');
-            $table->string('img_id');
+            $table->integer('img_id');
         });
     }
 
