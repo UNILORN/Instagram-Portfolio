@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class MSTINSTAGRAM extends Migration
+class MSTIMAGE extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class MSTINSTAGRAM extends Migration
      */
     public function up()
     {
-        Schema::create('MST_INSTAGRAM', function (Blueprint $table) {
+        Schema::create('MST_IMAGE', function (Blueprint $table) {
             $table->incriments('id')->unique();
-            $table->string('title');
             $table->string('url');
-            $table->string('img_id');
         });
     }
 
@@ -28,6 +26,6 @@ class MSTINSTAGRAM extends Migration
      */
     public function down()
     {
-        Schema::drop('MST_INSTAGRAM');
+        Schema::drop('MST_IMAGE');
     }
 }
