@@ -16,7 +16,7 @@ use App\Service\LocalInstagram;
 Route::get('/', function () {
 
     $instagram = new LocalInstagram();
-    dd($instagram->getAllColumn());
+    //dd($instagram->getAllColumn());
 
     return view('top');
 });
@@ -24,6 +24,10 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/', function () {
         return view('admin/top');
+    });
+    Route::post('/instagram/all', function () {
+
+        return redirect('/admin');
     });
 });
 

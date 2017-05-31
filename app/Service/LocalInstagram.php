@@ -29,4 +29,10 @@ class LocalInstagram
 
     }
 
+    public function putAllColumn(){
+        $data = $this->getAllColumn();
+
+
+    }
+
 }
