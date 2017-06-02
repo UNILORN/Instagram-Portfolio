@@ -16,7 +16,7 @@ use App\Service\LocalInstagram;
 Route::get('/', function () {
 
     $instagram = new LocalInstagram();
-    dd($instagram->getAllColumn());
+    //dd($instagram->getAllColumn());
     dd($instagram->putAllColumn());
     return view('top');
 });

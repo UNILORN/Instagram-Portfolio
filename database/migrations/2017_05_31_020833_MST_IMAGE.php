@@ -14,7 +14,7 @@ class MSTIMAGE extends Migration
     public function up()
     {
         Schema::create('MST_IMAGE', function (Blueprint $table) {
-            $table->incriments('id')->unique();
+            $table->increments('id')->unique();
             $table->string('url');
             $table->integer('instagram_id');
         });
