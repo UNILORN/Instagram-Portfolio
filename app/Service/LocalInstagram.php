@@ -40,11 +40,11 @@ class LocalInstagram
 
         $instagram_data = [];
         $image_data = [];
-
         foreach ($instagram->data as $image) {
+
             $instagram_data[] = [
                 "id" => $image->id,
-                "title" => $image->caption->text,
+                "title" => !empty($image->caption) ? $image->caption->text:"",
                 "url" => $image->link,
             ];
 
@@ -64,7 +64,6 @@ class LocalInstagram
                 ];
             }
         }
-
         Instagram::insert($instagram_data);
         Image::insert($image_data);
     }

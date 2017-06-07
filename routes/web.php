@@ -11,22 +11,22 @@
 |
 */
 
+use App\Model\Image;
 use App\Service\LocalInstagram;
 
-Route::get('/', function () {
 
-    $instagram = new LocalInstagram();
-    //dd($instagram->getAllColumn());
-    dd($instagram->putAllColumn());
-    return view('top');
+Route::get('/', function () {
+    $images = Image::all();
+    return view('top',compact('images'));
 });
 
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/', function () {
         return view('admin/top');
     });
-    Route::post('/instagram/all', function () {
-
+    Route::get('/instagram/all', function () {
+        $instagram = new LocalInstagram();
+        $instagram->putAllColumn();
         return redirect('/admin');
     });
 });

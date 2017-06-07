@@ -14,7 +14,7 @@ class MSTINSTAGRAM extends Migration
     public function up()
     {
         Schema::create('MST_INSTAGRAM', function (Blueprint $table) {
-            $table->increments('id')->unique();
+            $table->string('id')->unique();
             $table->string('title');
             $table->string('url');
         });
