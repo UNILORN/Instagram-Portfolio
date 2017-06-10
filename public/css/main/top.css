@@ -6,7 +6,15 @@ li,ul,a{
     text-decoration: none;
     list-style: none;
 }
+a:link,a:visited,a:hover,a:active { color: #2f2f2f; }
 
+main{
+    background-image: url("/img/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position: center;
+    background-size: cover;
+}
 .container {
     max-width: 980px;
     margin: auto;
@@ -14,14 +22,27 @@ li,ul,a{
 .main{
     width:100%;
     letter-spacing: -.4em;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .mainContents{
     display: inline-block;
-    width:780px;
+    width:730px;
     letter-spacing: initial;
     vertical-align: top;
 }
+
+.mainContentsTitle h1{
+    font-family: 'Dosis', sans-serif;
+    color: #2f2f2f;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: rgba(255,255,255,0.4) 1px 1px 0px, rgba(255,255,255,0.4) -1px 1px 0px,
+    rgba(255,255,255,0.4) 1px -1px 0px, rgba(255,255,255,0.4) -1px -1px 0px;
+}
+
 .instView{
     width:100%;
     box-sizing: border-box;
@@ -30,6 +51,7 @@ li,ul,a{
 .instView ul {
     box-sizing: border-box;
     padding: 10px;
+    text-align: center;
 }
 .instView li{
     display: inline-block;
@@ -39,6 +61,8 @@ li,ul,a{
     margin-bottom: 15px;
     width: 200px;
     height:200px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+    border-radius: 10px;
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -51,13 +75,43 @@ li,ul,a{
     width: 100%;
 }
 
+.pagination{
+    text-align: center;
+}
+.pagination li{
+    display: inline-block;
 
+}
 
 .mainSlider{
     display: inline-block;
-    width:200px;
+    width:250px;
+    box-sizing: border-box;
+    padding: 0 15px;
     letter-spacing: initial;
-    background-color: #411c0e;
-    height: 100vh;
 }
-
+.sliderContents{
+    width: 100%;
+}
+.profile{
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    text-shadow: rgba(255,255,255,0.4) 1px 1px 0px, rgba(255,255,255,0.4) -1px 1px 0px,
+    rgba(255,255,255,0.4) 1px -1px 0px, rgba(255,255,255,0.4) -1px -1px 0px;
+}
+.profile h2{
+    font-size: 40px;
+}
+.profile .profileImage{
+    box-sizing: border-box;
+    padding: 15px 0;
+    text-align: center;
+}
+.profile .profileImage img{
+    border-radius: 20px;
+    display: inline-block;
+}
+.profile .profileName{
+    margin: 0;
+    font-size: 30px;
+}

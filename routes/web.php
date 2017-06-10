@@ -13,10 +13,12 @@
 
 use App\Model\Image;
 use App\Service\LocalInstagram;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 
 Route::get('/', function () {
-    $images = Image::all();
+    $images = Image::paginate(15);
     return view('top',compact('images'));
 });
 

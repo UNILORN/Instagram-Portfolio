@@ -1,7 +1,7 @@
 <header>
     <div class="container">
         <div class="headerTitle">
-            <span>これはタイトルです</span>
+            <a href="/"></a>
         </div>
         <div class="headerList">
             <ul>

@@ -3,7 +3,7 @@ header{
     width:100%;
     height: 100px;
     letter-spacing: -.4em;
-
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
 }
 
 .headerTitle{
@@ -13,6 +13,16 @@ header{
     height: 100px;
     line-height: 100px;
     vertical-align: top;
+    background-image: url('/img/title.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.headerTitle a{
+    display: block;
+    height:100%;
+    width: 100%;
+    cursor: auto;
 }
 
 .headerList{
