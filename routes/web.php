@@ -18,7 +18,7 @@ use App\Http\Controllers\Controller;
 
 
 Route::get('/', function () {
-    $images = Image::paginate(15);
+    $images = Image::all();
     return view('top',compact('images'));
 });
 
