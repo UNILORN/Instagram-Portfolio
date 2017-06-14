@@ -16,11 +16,17 @@ main{
     max-width: 980px;
     margin: auto;
 }
-.main{
-    width:100%;
+.contents{
+    width: 100%;
     letter-spacing: -.4em;
     background-color: rgba(255, 255, 255, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.main{
+    letter-spacing: initial;
+    vertical-align: top;
+    display: inline-block;
+    width:730px;
 }
 
 .mainContents{
@@ -71,6 +77,14 @@ main{
     height: 100%;
     width: 100%;
 }
+.newsView{
+    box-sizing: border-box;
+    width: 730px;
+    padding: 15px;
+}
+.newsView tbody{
+    text-align: center;
+}
 
 .pagination{
     text-align: center;
@@ -80,7 +94,7 @@ main{
 
 }
 
-.mainSlider{
+.slider{
     display: inline-block;
     width:250px;
     box-sizing: border-box;

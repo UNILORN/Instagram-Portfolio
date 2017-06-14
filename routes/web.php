@@ -20,7 +20,13 @@ use App\Http\Controllers\Controller;
 
 Route::get('/', function () {
     $images = Image::orderBy('created','desc')->paginate(9);
-    return view('top',compact('images'));
+    $news = Image::select('link','created')
+        ->where('created','>',date("Y-m-d H:m:s",strtotime("-2 week")))
+        ->distinct()
+        ->orderBy('created','desc')
+        ->get();
+
+    return view('top',compact('images','news'));
 });
 
 Route::group(['prefix' => 'admin','middleware' => 'auth'], function () {
