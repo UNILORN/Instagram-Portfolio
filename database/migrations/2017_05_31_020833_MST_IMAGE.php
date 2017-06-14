@@ -18,6 +18,7 @@ class MSTIMAGE extends Migration
             $table->string('url');
             $table->string('instagram_id');
             $table->datetime('created');
+            $table->string('link');
         });
     }
 

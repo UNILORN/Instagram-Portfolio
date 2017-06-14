@@ -57,7 +57,8 @@ class LocalInstagram
                         $image_data[]=[
                             "url" => $multi_image->images->standard_resolution->url,
                             "instagram_id" => $image->id,
-                            "created"=>$image->created_time
+                            "created"=>$image->created_time,
+                            "link"=>$image->link
                         ];
                     }
 
