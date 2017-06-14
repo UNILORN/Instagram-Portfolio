@@ -18,7 +18,7 @@ use App\Http\Controllers\Controller;
 
 
 Route::get('/', function () {
-    $images = Image::paginate(9);
+    $images = Image::orderBy('created','desc')->paginate(9);
     return view('top',compact('images'));
 });
 

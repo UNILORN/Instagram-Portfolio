@@ -37,7 +37,6 @@ class LocalInstagram
     public function putAllColumn()
     {
         $instagram = $this->getAllColumn();
-        dd($instagram);
         $instagram_data = [];
         $image_data = [];
         foreach ($instagram->data as $image) {
@@ -57,7 +56,7 @@ class LocalInstagram
                         $image_data[]=[
                             "url" => $multi_image->images->standard_resolution->url,
                             "instagram_id" => $image->id,
-                            "created"=>$image->created_time,
+                            "created"=>date("Y-m-d H:i:00",$image->created_time),
                             "link"=>$image->link
                         ];
                     }
@@ -68,7 +67,9 @@ class LocalInstagram
                 if(empty(Image::where("url",$image->images->standard_resolution->url)->get()->toArray())) {
                     $image_data[] = [
                         "url" => $image->images->standard_resolution->url,
-                        "instagram_id" => $image->id
+                        "instagram_id" => $image->id,
+                        "created"=>date("Y-m-d H:i:00",$image->created_time),
+                        "link"=>$image->link
                     ];
                 }
             }
