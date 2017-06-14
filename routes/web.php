@@ -13,6 +13,7 @@
 
 use App\Model\Image;
 use App\Service\LocalInstagram;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
@@ -22,7 +23,7 @@ Route::get('/', function () {
     return view('top',compact('images'));
 });
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin','middleware' => 'auth'], function () {
     Route::get('/', function () {
         return view('admin/top');
     });
