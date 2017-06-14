@@ -42,6 +42,12 @@ header{
     height: 100px;
     line-height: 100px;
     display: inline-block;
+    color: #2f2f2f;
+    background-color: #fafafa;
+}
+.headerList ul li a:hover{
+    background-color: #9f9f9f;
+    color: #fafafa;
 }
 .headerList a{
     width:100px;

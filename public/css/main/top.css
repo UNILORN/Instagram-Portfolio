@@ -9,10 +9,7 @@ li,ul,a{
 a:link,a:visited,a:hover,a:active { color: #2f2f2f; }
 
 main{
-    background-image: url("/img/background.jpg");
-    background-repeat: no-repeat;
-    background-attachment:fixed;
-    background-position: center;
+    background: url("/img/background.jpg") no-repeat fixed center;
     background-size: cover;
 }
 .container {
