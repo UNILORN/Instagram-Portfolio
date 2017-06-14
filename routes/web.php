@@ -18,7 +18,7 @@ use App\Http\Controllers\Controller;
 
 
 Route::get('/', function () {
-    $images = Image::all();
+    $images = Image::paginate(9);
     return view('top',compact('images'));
 });
 
@@ -28,7 +28,7 @@ Route::group(['prefix' => 'admin'], function () {
     });
     Route::get('/instagram/all', function () {
         $instagram = new LocalInstagram();
-        $instagram->putAllColumn();
+        $result = $instagram->putAllColumn();
         return redirect('/admin');
     });
 });

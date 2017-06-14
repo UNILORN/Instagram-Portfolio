@@ -42,29 +42,49 @@ class LocalInstagram
         $image_data = [];
         foreach ($instagram->data as $image) {
 
-            $instagram_data[] = [
-                "id" => $image->id,
-                "title" => !empty($image->caption) ? $image->caption->text:"",
-                "url" => $image->link,
-            ];
+            if(is_null(Instagram::find($image->id))) {
+                $instagram_data[] = [
+                    "id" => $image->id,
+                    "title" => !empty($image->caption) ? $image->caption->text : "",
+                    "url" => $image->link,
+                ];
+            }
 
             // 画像が複数存在する場合
             if (!empty($image->carousel_media)) {
                 foreach ($image->carousel_media as $multi_image) {
-                    $image_data[]=[
-                        "url" => $multi_image->images->standard_resolution->url,
-                        "instagram_id" => $image->id
-                    ];
+                    if(empty(Image::where("url",$multi_image->images->standard_resolution->url)->get()->toArray())){
+                        $image_data[]=[
+                            "url" => $multi_image->images->standard_resolution->url,
+                            "instagram_id" => $image->id
+                        ];
+                    }
+
                 }
             } else {
                 // 画像が一つの場合
-                $image_data[]=[
-                    "url" => $image->images->standard_resolution->url,
-                    "instagram_id" => $image->id
-                ];
+                if(empty(Image::where("url",$image->images->standard_resolution->url)->get()->toArray())) {
+                    $image_data[] = [
+                        "url" => $image->images->standard_resolution->url,
+                        "instagram_id" => $image->id
+                    ];
+                }
             }
         }
-        Instagram::insert($instagram_data);
-        Image::insert($image_data);
+        $result = [];
+        if(!empty($instagram_data)){
+            Instagram::insert($instagram_data);
+        }
+        else{
+            $result[]="Instagram_data 変更なし";
+        }
+        if (!empty($image_data)) {
+            Image::insert($image_data);
+        }
+        else{
+            $result[]="Image_data 変更なし";
+        }
+
+        return $result;
     }
 }
