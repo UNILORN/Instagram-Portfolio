@@ -17,6 +17,7 @@ class MSTIMAGE extends Migration
             $table->increments('id')->unique();
             $table->string('url');
             $table->string('instagram_id');
+            $table->datetime('created');
         });
     }
 
