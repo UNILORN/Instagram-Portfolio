@@ -15,29 +15,33 @@
                         <div class="mainContentsTitle">
                             <h1>Welcome</h1>
                         </div>
-                        <p><center>ここは○○のページです</center></p>
+                        <div class="mainContentsBody">
+                            <p>ここは○○のページです</p>
+                        </div>
                     </div>
 
                     <div class="mainContents">
                         <div class="mainContentsTitle">
                             <h1>News</h1>
                         </div>
-                        <table class="newsView">
-                            <thead>
-                                <tr>
-                                    <th>Date</th>
-                                    <th>Detail</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($news as $new)
+                        <div class="newsView">
+                            <table>
+                                <thead>
                                     <tr>
-                                        <td>{{date("Y年 m月 d日　- H:m",strtotime($new->created))}}</td>
-                                        <td>画像を追加しました　： <a href="{{$new->link}}">Instagram</a></td>
+                                        <th>Date</th>
+                                        <th>Detail</th>
                                     </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    @foreach($news as $new)
+                                        <tr>
+                                            <td>{{date("Y年 m月 d日　- H:m",strtotime($new->created))}}</td>
+                                            <td>画像を追加しました　： <a href="{{$new->link}}">Instagram</a></td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
 
                     <div class="mainContents">
