@@ -14,3 +14,7 @@ InstagramAPIを使用し、Instagramに投稿さえすればサイトを更新�
 WebサーバはHerokuを採用している
 
 サイト構築者（サイト運営者）のInstagramAPIキーを取得し、.envに追加する。
+
+## TestServerを構築する
+
+
