@@ -7,7 +7,7 @@
 @section('content')
     <main>
 
-        ここはadminトップです
+
 
     </main>
 @endsection
